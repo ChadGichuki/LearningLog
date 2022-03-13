@@ -60,7 +60,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'learningLog.urls'
+ROOT_URLCONF = 'learninglog.urls'
 
 TEMPLATES = [
     {
