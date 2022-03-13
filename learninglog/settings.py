@@ -25,10 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-w*^0pn@9@gkq-5)h@p3pzu_3w%tc17aj3k@6dylf7z15vd!=g3'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = False
+
+# Allow only Heroku to host the project
+ALLOWED_HOSTS = ['gichuki-journal.herokuapp.com']
 
 
 # Application definition
@@ -128,6 +129,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATUC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
