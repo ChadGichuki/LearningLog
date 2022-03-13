@@ -25,11 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-w*^0pn@9@gkq-5)h@p3pzu_3w%tc17aj3k@6dylf7z15vd!=g3'
 
-
+# Set to False for heroku
 DEBUG = False
 
-# Allow only Heroku to host the project
-ALLOWED_HOSTS = ['gichuki-journal.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -66,7 +65,7 @@ ROOT_URLCONF = 'learninglog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'learninglog/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
