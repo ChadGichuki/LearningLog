@@ -1,1 +1,1 @@
-web: gunicorn learningLog.wsgi 
+web: gunicorn learninglog.wsgi 
