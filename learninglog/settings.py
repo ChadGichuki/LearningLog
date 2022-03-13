@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'learningLog.wsgi.application'
+WSGI_APPLICATION = 'learninglog.wsgi.application'
 
 
 # Database
